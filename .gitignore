@@ -1,0 +1,8 @@
+drone/
+
+bin/
+core.sqlite
+
+secrets.env
+set-environ.sh
+
