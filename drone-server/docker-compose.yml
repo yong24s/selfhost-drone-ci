@@ -7,13 +7,11 @@ services:
         - secrets.env
     command: >
         bash -c "
-            cd /build                   &&
-            ./scripts/build.sh          &&
-            ./bin/bin/drone-server
+            /build/scripts/build.sh
         "
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./scripts:/build/scripts
+      - ./build:/build
     ports:
       - "8080:8080"
 
