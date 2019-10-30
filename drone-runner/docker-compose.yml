@@ -3,11 +3,6 @@ version: "2"
 services:
   runner:
     image: drone/agent:1
-    environment:
-      - DRONE_RUNNER_CAPACITY=4
-      - DRONE_RUNNER_NAME=${HOSTNAME}
-      - DRONE_RPC_DEBUG=true
-    #  - DRONE_LOGS_TRACE=true
     env_file:
       - secrets.env
     restart: always
