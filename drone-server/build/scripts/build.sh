@@ -16,5 +16,7 @@ if [ ! -f "$DRONE" ]; then
   rm -rf CLONE_DIR GOPATH
 fi
 
+# Change pwd to a mounted volume so that db file will be saved there
+cd "/build"
 $DRONE
 
